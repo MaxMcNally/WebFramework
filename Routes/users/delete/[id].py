@@ -3,7 +3,8 @@ TemplateFile = 'users/Delete.html'
 
 class DeleteUser(Route):
     def __init__(self):
-        super().__init__(self)
+        self.TemplateFile = TemplateFile
+        super().__init__()
 
     def Route(self):
         print("Running Blog Index")

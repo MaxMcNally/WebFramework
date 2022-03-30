@@ -3,6 +3,7 @@ TemplateFile = 'product/Catalog.html'
 
 class ProductCatalog(Route):
     def __init__(self):
+        self.TemplateFile = TemplateFile
         super().__init__(self)
 
     def Route(self):
@@ -15,6 +16,3 @@ class ProductCatalog(Route):
             'output' : self.Template(data)   
         }
 
-    def Template(self,data):
-        template = self.env.get_template(TemplateFile)
-        return template.render(data)

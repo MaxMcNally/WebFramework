@@ -3,6 +3,7 @@ TemplateFile = 'blog/Index.html'
 
 class BlogIndex(Route):
     def __init__(self):
+        self.TemplateFile = TemplateFile
         super().__init__()
 
     def Route(self):
@@ -14,7 +15,3 @@ class BlogIndex(Route):
             'data' : data,
             'output' : self.Template(data)   
         }
-
-    def Template(self,data):
-        template = self.env.get_template(TemplateFile)
-        return template.render(data)
